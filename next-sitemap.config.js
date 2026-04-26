@@ -1,7 +1,7 @@
-const siteMetadata = require("./src/utils/siteMetaData");
+import siteMetadata from "./src/utils/siteMetaData";
 
-
+/** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: siteMetadata.siteUrl,
-    generateRobotsTxt: true,
-  }
+  siteUrl: siteMetadata.siteUrl || siteMetadata.default.siteUrl,
+  generateRobotsTxt: true,
+};
