@@ -6,7 +6,7 @@ import React from "react";
 const BlogLayoutThree = ({ blog }) => {
   return (
     <div className="group flex flex-col items-center text-dark dark:text-light hover-lift">
-      <Link href={blog.url} className="h-full rounded-2xl overflow-hidden shadow-lg">
+      <Link href={blog.url} className="h-full rounded-2xl overflow-hidden shadow-lg w-full">
         <Image
           src={blog.image.src}
           placeholder="blur"
@@ -34,6 +34,12 @@ const BlogLayoutThree = ({ blog }) => {
             </span>
           </h2>
         </Link>
+
+        {blog.summary && (
+          <p className="hidden sm:inline-block mt-2 mb-3 text-sm font-medium text-dark/70 dark:text-light/70">
+            {blog.summary}
+          </p>
+        )}
 
         <span className="capitalize text-gray dark:text-light/60 font-medium text-sm sm:text-base">
           {format(new Date(blog.publishedAt), "MMMM dd, yyyy")}

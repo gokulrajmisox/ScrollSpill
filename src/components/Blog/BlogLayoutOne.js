@@ -37,6 +37,11 @@ const BlogLayoutOne = ({ blog }) => {
             </span>
           </h2>
         </Link>
+        {blog.summary && (
+          <p className="hidden sm:inline-block mt-3 text-sm font-medium text-light/70 line-clamp-2 w-3/4">
+            {blog.summary}
+          </p>
+        )}
       </div>
     </div>
   );
