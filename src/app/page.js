@@ -1,5 +1,5 @@
 import { createClient } from '@/src/utils/supabase/server'
-import { logout } from './login/actions'
+import { logout } from '@/src/app/uploader/login/actions'
 import { redirect } from 'next/navigation'
 
 export default async function UploaderDashboard() {
@@ -50,7 +50,7 @@ export default async function UploaderDashboard() {
                 <button className="w-full py-4 bg-accent text-white font-bold rounded-2xl shadow-lg hover:shadow-accent/40 transition-all duration-300 active:scale-95">
                   Create New Post
                 </button>
-                <button className="w-full py-4 bg-light/10 dark:bg-dark/10 border border-dark/5 dark:border-light/10 font-bold rounded-2xl hover:bg-light/20 transition-all duration-300 active:scale-95">
+                <button className="w-full py-4 bg-light/10 dark:bg-dark/10 border border-dark/5 dark:border-light/10 font-bold rounded-2xl hover:bg-light/20 transition-all duration-300 active:scal[...]
                   Manage Media
                 </button>
               </div>
